@@ -1,0 +1,19 @@
+TMC Autotune 
+wget -qO - https://raw.githubusercontent.com/andrewmcgr/klipper_tmc_autotune/main/install.sh | sed 's/klipper\.service/klipper-K1.service/g' | bash
+
+ShakerTune
+wget -qO - https://raw.githubusercontent.com/Frix-x/klippain-shaketune/main/install.sh | sed 's/klipper\.service/klipper-K1.service/g' | bash
+
+Cartographer beta
+curl -s -L https://raw.githubusercontent.com/Cartographer3D/cartographer3d-plugin/refs/heads/main/scripts/install.sh | bash -s -- --klipper ~/klipper --klippy-env ~/klippy-env
+
+Virtual Pin
+cd ~
+git clone https://github.com/pedrolamas/klipper-virtual-pins.git
+./klipper-virtual-pins/install.sh
+
+Timelapse
+cd ~/
+git clone https://github.com/mainsail-crew/moonraker-timelapse.git
+cd ~/moonraker-timelapse
+make install
